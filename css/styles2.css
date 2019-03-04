@@ -1,0 +1,81 @@
+.nav-bar {
+  position: absolute;
+  top: 900px;
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  width: 100%;
+}
+#home {
+  width: 200px;
+  height: 200px;
+  padding:40px 0;
+  text-align:center;
+  box-sizing:border-box;
+  background: red;
+  position: relative;
+  border-radius: 100%;
+  /* transition: 0.5s; */
+}
+
+#home:hover {
+  animation: squash 1.5s linear forwards;
+}
+
+@keyframes squash {
+  0% {transform: translateY(0)}
+  2% {transform: translateY(-90px)}
+  5% {transform: translateY(-120px)}
+  8% {transform: translateY(-90px)}
+  10% {transform: translateY(0)}
+  15% {
+    transform: translateY(20px);
+    width: 220px;
+    height: 180px;
+  }
+  17% {
+    transform: translateY(-45px);
+    width: 200px;
+    height: 200px;
+  }
+  20% {transform: translateY(-60px)}
+  23% {transform: translateY(-45px)}
+  25% {transform: translateY(0)}
+  30% {
+    transform: translateY(40px);
+    width: 240px;
+    height: 160px;
+  }
+  32% {
+    transform: translateY(-30px);
+    width: 200px;
+    height: 200px;
+  }
+  35% {transform: translateY(-40px)}
+  38% {transform: translateY(-30px)}
+  40% {transform: translateY(0)}
+  45% {
+    transform: translateY(60px);
+    width: 260px;
+    height: 140px;
+  }
+  47% {transform: translateY(-15px)}
+  50% {transform: translateY(-20px)}
+  53% {transform: translateY(-15px)}
+  55% {transform: translateY(0)}
+  60% {
+    transform: translateY(80px);
+    width: 280px;
+    height: 120px;
+  }
+  65% {
+    transform: translateY(100px);
+    width: 300px;
+    height: 100px;
+  }
+  100% {
+    transform: translateY(100px);
+    width: 300px;
+    height: 100px;
+  }
+}

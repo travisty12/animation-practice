@@ -1,0 +1,130 @@
+body {
+  text-align: center;
+}
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#first {
+  top: 100px;
+  background-color: blue;
+}
+
+#second {
+  top: 300px;
+  background-color: red;
+}
+
+@keyframes rainbow {
+  0% {background-color: red}
+  14% {background-color: orange}
+  28% {background-color: yellow}
+  42% {background-color: green}
+  56% {background-color: blue}
+  70% {background-color: indigo}
+  85% {background-color: violet}
+  100% {background-color: red}
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+@keyframes bounce {
+  0% {transform: translateY(0)}
+  3% {transform: translateY(-90px)}
+  10% {transform: translateY(-120px)}
+  17% {transform: translateY(-90px)}
+  20% {transform: translateY(0)}
+  23% {transform: translateY(0)}
+  30% {transform: translateY(-45px)}
+  37% {transform: translateY(-60px)}
+  40% {transform: translateY(-45px)}
+  43% {transform: translateY(0)}
+  50% {transform: translateY(-30px)}
+  57% {transform: translateY(-40px)}
+  60% {transform: translateY(-30px)}
+  63% {transform: translateY(0)}
+  70% {transform: translateY(-15px)}
+  77% {transform: translateY(-20px)}
+  80% {transform: translateY(-15px)}
+  83% {transform: translateY(0)}
+  90% {transform: translateY(-3px)}
+  97% {transform: translateY(-4px)}
+  100% {transform: translateY(-3px)}
+}
+
+@keyframes wiggle {
+  0% {transform: translate(0,0)}
+  25% {
+    transform: translate(2px,-1px);
+    width: 102px;
+    height: 102px;
+  }
+  50% {
+    transform: translate(0,0);
+    width: 100px;
+    height: 100px;
+  }
+  75% {transform: translate(-2px,-1px);
+    width: 102px;
+    height: 102px;
+  }
+  100% {transform: translate(0,-1px);
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#third {
+  top: 500px;
+  border: 4px dashed #000;
+  animation: rainbow 10s linear infinite, spin 6s linear infinite;
+}
+
+#fourth {
+  top: 700px;
+  background-color: violet;
+}
+
+#first:hover {
+  transition: 5s;
+  background-color: yellow;
+  animation: bounce 1.5s linear infinite;
+}
+
+#second:hover {
+  transition: 1s;
+  border-radius: 50%;
+}
+
+#third:hover {
+  animation-play-state: running, paused;
+}
+
+#fourth:hover {
+  animation: wiggle 1s linear infinite;
+}
